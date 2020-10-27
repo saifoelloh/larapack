@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
   && docker-php-ext-install -j$(nproc) gd
 
 RUN curl https://getcomposer.org/composer-stable.phar --output composer.phar
-RUN mv composer.phar /usr/local/bin/composer
+RUN mv composer.phar ~/.local/bin
 
 RUN apt-get update
 RUN apt-get install -y npm vim
