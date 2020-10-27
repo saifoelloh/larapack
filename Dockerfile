@@ -17,4 +17,4 @@ RUN apt-get install -y npm
 
 RUN curl https://getcomposer.org/composer-stable.phar --output composer.phar
 RUN mv composer.phar /usr/local/bin/composer
-
+RUN chmod 755 /usr/local/bin/composer
