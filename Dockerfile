@@ -17,12 +17,3 @@ RUN mv composer.phar /usr/local/bin/composer
 
 RUN apt-get update
 RUN apt-get install -y npm vim
-
-RUN useradd -m foo
-RUN adduser foo sudo
-
-USER foo
-
-RUN mkdir /home/foo/app
-
-WORKDIR /home/foo/app
