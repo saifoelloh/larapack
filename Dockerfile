@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
         libzip-dev \
         zip \
     && docker-php-ext-install zip \
+    && docker-php-ext-install zip pdo pdo_mysql \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd
 
